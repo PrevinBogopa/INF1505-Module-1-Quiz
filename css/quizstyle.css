@@ -1,0 +1,124 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  font-family: "Bookman Old Style", "Book Antiqua", serif;
+  font-size: 102%;
+}
+
+:root {
+  --hue-neutral: 200;
+  --hue-wrong: 0;
+  --hue-correct: 145;
+}
+
+body {
+  --hue: var(--hue-neutral);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(var(--hue), 100%, 25%);
+}
+
+body.correct {
+  --hue: var(--hue-correct);
+}
+
+body.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.container {
+  width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 2em;
+  box-shadow: 0 0 20px 2px;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 15px;
+  margin: 20px 0;
+}
+
+.btn {
+  --hue: var(--hue-neutral);
+  border: 1px solid hsl(var(--hue), 100%, 30%);
+  background-color: hsl(var(--hue), 100%, 50%);
+  border-radius: 5px;
+  padding: 10px 10px;
+  color: white;
+  outline: none;
+}
+
+.btn:hover {
+  border-color: black;
+}
+
+.btn.correct {
+  --hue: var(--hue-correct);
+  color: black;
+}
+
+.btn.wrong {
+  --hue: var(--hue-wrong);
+}
+
+#marks {
+  width: 20%;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 2px;
+  position: absolute;
+  right: 10%;
+  top: 1%;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 100%;
+}
+
+.start-btn, .next-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#correctSign, #wrongSign {
+  width: 7%;
+  height: 16%;
+  margin: 0%;
+  position: absolute;
+  bottom: 1%;
+  right: 76px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.result {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+
+

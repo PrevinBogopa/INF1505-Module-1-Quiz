@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Quiz App</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/quizstyle.css" type="text/css">
+	<link rel="stylesheet" href="css/prism.css" type="text/css">
+	<script defer src="js/quizjs.js"></script>
+	<script defer src="js/prism.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div id="questionBox" class="hide">
+			<div  ><pre><code class="language-python" id="question">
+				function add(a, b) {
+				  return a + b;
+				}
+				</code></pre></div>
+				
+			<div id="answer-btns" class="btn-grid">
+				<button class="btn">answer 1</button>
+				<button class="btn">answer 2</button>
+				<button class="btn">answer 3</button>
+				<button class="btn">answer 4</button>
+			</div>
+			<div  ><pre><code class="language-python " id="explanation">
+				</code></pre></div>
+		
+			<div id="marks"><p>Total Marks:</p>
+				<p id="total">0/0</p>	</div>
+		</div>
+		<div class="controls">
+			<button id="start-btn" class="start-btn btn">Start PART 1 module 1</button>
+			<button id="next-btn" class="next-btn btn hide">Next</button>
+		</div>
+	</div>
+	<div  class="container hide " id="correctSign">
+		<img src="images/correct.jpg" alt="Correct Answer">
+	</div>
+	<div class="container hide" id="wrongSign">
+		<img src="images/wrong.png" alt="Wrong answer">
+	</div>
+	<div class="container result hide">
+		<h1>Congratulations!!!</h1>
+		<h3>You have completed the quiz!</h3>
+		<h2>Your total score is :</h2>
+		<h2 id="disMarks">10/10</h2>
+		<button id="restart-btn" class="start-btn btn">Restart</button>
+	</div>
+</body>
+</html>
